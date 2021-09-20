@@ -24,5 +24,5 @@ bash run.sh
 
 # Todo
 
-- [] Beautifull viewer
-- [] Save schedule on json file
+- [ ] Beautifull viewer
+- [ ] Save schedule on json file
