@@ -1,16 +1,16 @@
 import os
 
 
-def clearConsole():
+def clear_сonsole():
     WINDOWS_OS_NAME = "nt"
     CLR_COMMAND_WIN = "cls"
     CLR_COMMAND_OTHER_OS = "clear"
 
     if (os.name == WINDOWS_OS_NAME):
-        executeCommand(CLR_COMMAND_WIN)
+        execute_сommand(CLR_COMMAND_WIN)
     else:
-        executeCommand(CLR_COMMAND_OTHER_OS)
+        execute_сommand(CLR_COMMAND_OTHER_OS)
 
 
-def executeCommand(command: str):
+def execute_сommand(command: str):
     os.system(command)
