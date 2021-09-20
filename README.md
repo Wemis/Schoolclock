@@ -22,6 +22,13 @@ after
 bash run.sh
 ```
 
+# Program dependencies
+
+* python
+* figlet
+* lolcat
+
+
 # Todo
 
 - [ ] Beautifull viewer
