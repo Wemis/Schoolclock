@@ -1,12 +1,9 @@
 import os
 import time
 
-os.system("clear") 
-os.system("figlet 'Created by Wemis'|lolcat")
 
-
-alltime6=19800
-alltime7=23100
+alltime6=19800 # all time of 6 lessons in secounds
+alltime7=23100 # all time of 7 lessons in secounds
 
 
 lessons=int(input("Уроков(6/7) ")) 
