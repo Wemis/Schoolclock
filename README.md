@@ -14,17 +14,15 @@ and
 
 ``` sh
 git clone https://github.com/bLendeR965/Schoolclock.git
-```
 
-after 
+pip install rich
 
-``` sh
 bash run.sh
 ```
 
 # Program dependencies
 
-* python
+* python 3.6.1 minimum
 * figlet
 * lolcat
 
