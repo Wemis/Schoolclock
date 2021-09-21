@@ -6,8 +6,7 @@ class Lesson:
         self.name = name
 
 
-    @staticmethod
-    def to_list_lessons(lessons: list[str]):
+def to_list_lessons(lessons: list[str]) -> list[Lesson]:
         out_lessons = []
 
         for lesson in lessons:
