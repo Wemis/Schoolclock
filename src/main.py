@@ -1,4 +1,4 @@
-from types.lesson import Lesson, to_list_lessons
+from types.lesson import to_list_lessons
 import settingsManager
 import clock
 
