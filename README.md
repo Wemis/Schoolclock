@@ -1,6 +1,7 @@
 # Schoolclock ⌚
 
-School clocks - is an application that will help you find out how many lessons are left, how many have passed, the total elapsed time, and much more
+School clocks - is an application that will help you find out how many lessons are left, how many have passed, the total
+elapsed time, and much more
 
 # Screenshots
 
@@ -26,8 +27,7 @@ bash run.sh
 * figlet
 * lolcat
 
-
 # Todo
 
-- [ ] Beautifull viewer
+- [ ] Beautiful viewer
 - [ ] Save schedule on json file

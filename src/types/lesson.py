@@ -7,13 +7,13 @@ class Lesson:
 
 
 def to_list_lessons(lessons: list[str]) -> list[Lesson]:
-        out_lessons = []
+    out_lessons = []
 
-        for lesson in lessons:
-            out_lessons.append(
-                Lesson(
-                    lesson
-                )
+    for lesson in lessons:
+        out_lessons.append(
+            Lesson(
+                lesson
             )
+        )
 
-        return out_lessons
+    return out_lessons
