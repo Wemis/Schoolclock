@@ -1,6 +1,6 @@
-from types.lesson import to_list_lessons
-import settingsManager
 import clock
+import settingsManager
+from types.lesson import to_list_lessons
 
 
 def main():

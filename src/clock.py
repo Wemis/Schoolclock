@@ -1,9 +1,7 @@
-import time
-
-from extensions import clear_console
+from render import *
 from types.lesson import Lesson
 
-MINUTE = 1
+MINUTE = 60
 go_home_message = "Go home!!!"
 
 
@@ -12,14 +10,14 @@ def run(lessons: list[Lesson]):
     delay = 1 * MINUTE
     break_duration = 5 * MINUTE
 
-    for i in range(len(lessons)):
-        current_lesson = lessons[i].name
-        next_lesson = get_next_lesson(lessons, i)
+    for lesson in range(len(lessons)):
+        current_lesson = lessons[lesson].name
+        next_lesson = get_next_lesson(lessons, lesson)
         start_lesson(current_lesson, next_lesson, delay)
         pause(break_duration)
 
 
-def get_next_lesson(lessons: list[Lesson], current_lesson: Lesson) -> Lesson:
+def get_next_lesson(lessons: list[Lesson], current_lesson: int) -> str:
     if current_lesson + 1 == len(lessons):
         return go_home_message
     return lessons[current_lesson + 1].name
@@ -36,9 +34,3 @@ def start_lesson(current_lesson: str, next_lesson: str, update_console_delay: in
 def pause(break_duration: int):
     print(f"🐠 Break {break_duration} minutes")
     time.sleep(break_duration)
-
-
-def update_console(msg: str, delay: int):
-    clear_console()
-    print(msg)
-    time.sleep(delay)
