@@ -1,6 +1,6 @@
 import clock
 import settingsManager
-from src.lesson import to_list_lessons
+from lesson import to_list_lessons
 
 
 def main():
