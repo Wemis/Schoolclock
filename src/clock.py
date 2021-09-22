@@ -1,18 +1,20 @@
-from render import *
-from types.lesson import Lesson
+import time
+
+from renderer import *
+from src.lesson import Lesson
 
 MINUTE = 60
 go_home_message = "Go home!!!"
 
 
-def run(lessons: list[Lesson]):
-    # all constants in minutes
-    delay = 1 * MINUTE
+def start(lessons: list[Lesson]):
+    delay = MINUTE
     break_duration = 5 * MINUTE
 
-    for lesson in range(len(lessons)):
-        current_lesson = lessons[lesson].name
-        next_lesson = get_next_lesson(lessons, lesson)
+    for curr_lesson_by_number in range(len(lessons)):
+        current_lesson = lessons[curr_lesson_by_number].name
+        next_lesson = get_next_lesson(lessons, curr_lesson_by_number)
+
         start_lesson(current_lesson, next_lesson, delay)
         pause(break_duration)
 
@@ -25,12 +27,14 @@ def get_next_lesson(lessons: list[Lesson], current_lesson: int) -> str:
 
 def start_lesson(current_lesson: str, next_lesson: str, update_console_delay: int):
     for time_left in range(Lesson.DURATION_MINUTES * MINUTE, 0, -1):
-        update_console(
-            f"Time to end lesson {time_left / MINUTE} minutes\nCurrent lesson is {current_lesson}\nNext lesson is {next_lesson}",
-            update_console_delay
+        render_msg(
+            f"Time to end lesson {round(time_left / MINUTE, 2)} minutes\n"
+            f"Current lesson is {current_lesson}\n"
+            f"Next lesson is {next_lesson}"
         )
+        time.sleep(update_console_delay)
 
 
 def pause(break_duration: int):
-    print(f"🐠 Break {break_duration} minutes")
+    render_msg(f"🐠 Break {break_duration} minutes")
     time.sleep(break_duration)
