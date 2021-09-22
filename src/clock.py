@@ -1,13 +1,13 @@
 import time
 
+from lesson import Lesson
 from renderer import *
-from src.lesson import Lesson
 
 MINUTE = 60
 go_home_message = "Go home!!!"
 
 
-def start(lessons: list[Lesson]):
+def start(lessons: list[Lesson]) -> None:
     delay = MINUTE
     break_duration = 5 * MINUTE
 
@@ -25,7 +25,7 @@ def get_next_lesson(lessons: list[Lesson], current_lesson: int) -> str:
     return lessons[current_lesson + 1].name
 
 
-def start_lesson(current_lesson: str, next_lesson: str, update_console_delay: int):
+def start_lesson(current_lesson: str, next_lesson: str, update_console_delay: int) -> None:
     for time_left in range(Lesson.DURATION_MINUTES * MINUTE, 0, -1):
         render_msg(
             f"Time to end lesson {round(time_left / MINUTE, 2)} minutes\n"
@@ -35,6 +35,6 @@ def start_lesson(current_lesson: str, next_lesson: str, update_console_delay: in
         time.sleep(update_console_delay)
 
 
-def pause(break_duration: int):
+def pause(break_duration: int) -> None:
     render_msg(f"🐠 Break {break_duration} minutes")
     time.sleep(break_duration)
